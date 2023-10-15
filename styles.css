@@ -37,16 +37,34 @@ body, html {
 }
 
 .contact-btn {
+        text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
     color: white;
     background-color: #12bcff;
     font-weight: bold;
+}
+
+#book-sec {
+    position: absolute;
+    top: 800px;
+    left: 850px;
+}
+
+#book-sec h2 {
+    position: absolute;
+    left: -130px;
+    top: -70px;
+    width: 30vw;
 }
 
 .hero {
     margin-top: 3rem;
 }
 
-.hero h1,p{
+.hero h1,.hero p{
     text-align: center;
     line-height: .9rem;
 }
@@ -64,3 +82,54 @@ body, html {
 body {
     animation: fadeIn 1s ease;
 }
+
+.description {
+    margin: 5rem 25rem;
+}
+
+#left-desc {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-desc h1, #left-desc p {
+    max-height: 1rem;
+    float: left;
+}
+
+#left-desc h1 {
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+
+#left-desc p {
+    position: absolute;
+    top: 350px;
+    left: 650px;
+}
+
+
+#right-desc h1, #right-desc p {
+    max-height: 1rem;
+    float: left;
+}
+
+#right-desc h1 {
+    position: absolute;
+    top: 500px;
+    right: 650px;
+}
+
+#right-desc p {
+    position: absolute;
+    top: 550px;
+    right: 650px;
+}
+
+#right-desc img {
+        position: absolute;
+    top: 450px;
+    right: 400px;
+}
+
