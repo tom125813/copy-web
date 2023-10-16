@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const companyName = "Nexus Copywriting";
-    document.body.innerHTML = document.body.innerHTML.replace(/{title}/g, companyName);
+document.body.innerHTML = document.body.innerHTML.replace(/{title}/g, companyName);
