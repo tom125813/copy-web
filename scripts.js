@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let siteTitle = "Nexus Copywriting";
+    let siteTitle = "Ink & Quill";
     let elements = document.querySelectorAll("[data-title-replace]");
     
     elements.forEach(element => {
@@ -23,23 +23,23 @@ function typeWriter() {
         // Adding text
         outputElement.innerHTML = baseString + texts[textIndex].substring(0, charIndex + 1);
         charIndex++;
-        setTimeout(typeWriter, 100);
+        setTimeout(typeWriter, 70);
     } else if (isDeleting && charIndex >= 0) {
         // Deleting text
         outputElement.innerHTML = baseString + texts[textIndex].substring(0, charIndex);
         charIndex--;
-        setTimeout(typeWriter, 100);
+        setTimeout(typeWriter, 70);
     } else if (charIndex === texts[textIndex].length) {
         // When the text is fully typed, start deleting after a pause
         setTimeout(() => {
             isDeleting = true;
             typeWriter();
-        }, 2000);
+        }, 1200);
     } else if (charIndex < 0) {
         // When the text is fully deleted, move to the next text and start typing
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
-        setTimeout(typeWriter, 500); // Small pause before typing the next text
+        setTimeout(typeWriter, 300); // Small pause before typing the next text
     }
 }
 

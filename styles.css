@@ -6,6 +6,8 @@ body, html {
     
     font-family: 'Gabarito', sans-serif;
     background-color: #f7f7f7;
+    
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -48,16 +50,15 @@ body, html {
 }
 
 #book-sec {
-    position: absolute;
-    top: 800px;
-    left: 850px;
+    display: block;
+    width: 100vw;
+    margin-top: 3.5rem;
+    text-align: center;
+    height: 5rem;
 }
 
 #book-sec h2 {
-    position: absolute;
-    left: -130px;
-    top: -70px;
-    width: 30vw;
+    
 }
 
 .hero {
@@ -84,53 +85,91 @@ body {
 }
 
 .description {
-    margin: 5rem 25rem;
+    width: 100vw;
+    height: 25rem;
 }
 
 #left-desc {
     display: flex;
     flex-direction: row;
+    position: relative;
+    left: 30%;
+    width: 40%;
+    padding-right: 2rem;
+    
+    margin-bottom: 2rem;
 }
 
 #left-desc h1, #left-desc p {
-    max-height: 1rem;
-    float: left;
+    background-color: blue;
 }
 
 #left-desc h1 {
     position: absolute;
-    top: 300px;
-    left: 650px;
+    background-color: orange;
+    float: left;
+    text-align: left;
+    width: 10rem;
+    font-size: 1.5rem;
+    height: 0rem;
+    top: 40px;
+    margin-left: 250px;
 }
 
 #left-desc p {
     position: absolute;
-    top: 350px;
-    left: 650px;
+    float: left;
+    text-align: left;
+    width: 10rem;
+    height: 0rem;
+    top: 90px;
+    margin-left: 250px;
+}
+
+#left-desc img  {
+    padding-right: 2rem;
+}
+
+#right-desc {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    left: 30%;
+    width: 40%;
 }
 
 
 #right-desc h1, #right-desc p {
-    max-height: 1rem;
-    float: left;
+    background-color: blue;
+    float: right;
 }
 
 #right-desc h1 {
     position: absolute;
-    top: 500px;
-    right: 650px;
+    background-color: orange;
+    float: right;
+    text-align: right;
+    width: 10rem;
+    font-size: 1.5rem;
+    height: 0rem;
+    top: 20px;
+    margin-right: 250px;
 }
 
 #right-desc p {
     position: absolute;
-    top: 550px;
-    right: 650px;
+    float: right;
+    text-align: right;
+    width: 10rem;
+    height: 0rem;
+    top: 70px;
+    margin-right: 250px;
 }
 
 #right-desc img {
-        position: absolute;
-    top: 450px;
-    right: 400px;
+    padding-left: 2rem;
+    float: right;
+    
 }
 
 /*TYPEWRITER*/
@@ -143,9 +182,14 @@ body {
 }
 
 .typewriter {
-    border-right: 0.15em solid black;
+    border-right: 0.4em solid black;
+    padding-right: 1rem;
     overflow: hidden;
     white-space: nowrap;
+    background-color: #12bcff;
+    color: white;
+    padding: 1rem;
+    border-radius: 25rem;
     animation: blink-caret 0.75s step-end infinite;
 }
 
@@ -154,8 +198,48 @@ body {
         border-color: transparent;
     }
     50% {
-        border-color: black;
+        border-color: #0698d1;
     }
 }
 
 /*END OF TYPEWRITER*/
+
+.footer-container {
+    margin-top: 14rem;
+    background-color: #1f1f1f;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.policy-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.policy-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.policy-list a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.policy-list a:hover {
+    color: #3498db;
+}
+
+.footer-container p {
+    margin: 100px 0 0;
+}
+
