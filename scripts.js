@@ -9,11 +9,24 @@ document.addEventListener("DOMContentLoaded", function() {
     document.title = siteTitle;
 });
 
-const texts = ["Your Word-Play", "Your Business", "Today!"];
+const texts = ["Your Word-Play", "Your Business", "Today"];
 const outputElement = document.getElementById("type-output");
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false; // Flag to determine whether we're adding or deleting text
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks.classList.contains('active')) {
+        document.querySelector('.navbar h1').style = "display: block;";
+    } else {
+document.querySelector('.navbar h1').style = "display: none; ";
+    }
+    navLinks.classList.toggle('active');
+
+});
+
+
 
 function typeWriter() {
     // Base string that always remains
@@ -43,15 +56,4 @@ function typeWriter() {
     }
 }
 
-typeWriter();
-
-document.querySelector('.hamburger').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks.classList.contains('active')) {
-        document.querySelector('.navbar h1').style = "display: block;";
-    } else {
-document.querySelector('.navbar h1').style = "display: none; ";
-    }
-    navLinks.classList.toggle('active');
-
-});
+typeWriter(); // produces error because it might not exist
