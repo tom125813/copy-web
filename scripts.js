@@ -44,3 +44,14 @@ function typeWriter() {
 }
 
 typeWriter();
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks.classList.contains('active')) {
+        document.querySelector('.navbar h1').style = "display: block;";
+    } else {
+document.querySelector('.navbar h1').style = "display: none; ";
+    }
+    navLinks.classList.toggle('active');
+
+});
