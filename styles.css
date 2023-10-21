@@ -18,7 +18,8 @@ body, html {
     background-color: #1f1f1f;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0rem 25rem;.
+    /*padding: 0rem 25rem;.*/
+    padding: 0rem 25vw;
 }
 
 .nav-links {
@@ -83,7 +84,7 @@ body, html {
 }
 
 body {
-    animation: fadeIn 1s ease;
+    animation: fadeIn .3s ease;
 }
 
 .description {
@@ -244,4 +245,51 @@ body {
 .footer-container p {
     margin: 100px 0 0;
 }
+
+.service-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    margin: 5rem 10rem;
+    gap: 2rem;  /* gap between the service items */
+}
+
+.service-item {
+    text-align: center;
+    flex-basis: calc(33.33% - 5rem);  /* This divides the width into thirds, subtracting the gap */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);  /* optional shadow for better aesthetics */
+    border-radius: 5px;  /* optional rounded corners */
+    overflow: hidden;  /* to ensure any child elements don't spill out of rounded corners */
+    padding: 1rem;
+    background: #fff;
+    transition: transform 0.3s ease;  /* optional hover effect for elevation */
+    padding-bottom:2rem;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);  /* optional hover effect for elevation */
+}
+
+.service-item img {
+    max-width: 100%;  /* to ensure image doesn't overflow its parent div */
+    display: block;  /* to remove any unwanted space below the image */
+    margin: 0 auto 1rem;  /* centers the image horizontally */
+}
+
+
+.contact-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;  /* example blue color, you can change it */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;  /* darker shade of blue for hover */
+}
+
 
