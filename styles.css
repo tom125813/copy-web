@@ -1,20 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
 
+/* NEEDS ANIMATIONS */
+/* NEEDS ANIMATIONS */
+/* NEEDS ANIMATIONS */
+/* NEEDS ANIMATIONS */
+/* NEEDS ANIMATIONS */
+/* NEEDS ANIMATIONS */
+/* NEEDS ANIMATIONS */
+
 body, html {
     margin: 0;
     padding: 0;
+    
+    height: 100%;
     
     font-family: 'Gabarito', sans-serif;
     background-color: #f7f7f7;
     
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 50px;
     background-color: #1f1f1f;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -55,12 +65,17 @@ body, html {
 #book-sec {
     display: block;
     padding: 0rem 2rem;
-    margin-top: 3.5rem;
+    margin-top: 5rem;
     text-align: center;
-    height: 5rem;
 }
 
+#book-sec a {
+    margin-bottom: 4rem;
+}
 
+.desc-p {
+    text-align: center;
+}
 
 #book-sec h2 {
     
@@ -92,7 +107,7 @@ body {
 
 .description {
     width: 100vw;
-    height: 25rem;
+    min-height: 50rem;
 }
 
 #left-desc {
@@ -210,8 +225,15 @@ body {
 
 /*END OF TYPEWRITER*/
 
+footer {
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
 .footer-container {
-    margin-top: 14rem;
+    position: relative;
+    bottom: 0;
     background-color: #1f1f1f;
     padding: 40px 0;
     color: white;
@@ -220,7 +242,6 @@ body {
 }
 
 .footer-container h3 {
-    margin-top: 0;
     font-size: 24px;
 }
 
@@ -328,11 +349,11 @@ body {
 
 @media (max-width: 1158px) {
     .navbar {
-        padding: 3rem;
+        padding: 0rem;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 746px) {
     .navbar {
         padding: 1rem 2rem;
     }
@@ -383,7 +404,7 @@ body {
         position: relative;
         left: 0%;
         width: 100%;
-        padding-right: 2rem;
+        padding-left: 2rem;
 
         margin-bottom: 2rem;
     }
@@ -424,6 +445,7 @@ body {
         position: relative;
         left: 0%;
         width: 100%;
+        padding-right: 2rem;
     }
 
 
@@ -471,12 +493,17 @@ body {
         margin: 0;
     }
     
+    .nav-links {
+        position: relative;
+        transition: top 1s ease-in-out;
+    }
+    
     .nav-links a {
         display: block;          /* Added this to make links block elements */
-        padding: 1rem 2rem;      /* Adjusted padding for better appearance */
+        margin-left: 1rem;
         max-width: 100%;             /* Set width to 100% */
         height: auto;            /* Make height auto */
-        font-size: 2rem;    /* Center the text */
+        font-size: 1.6rem;    /* Center the text */
         text-decoration: none;   /* Remove underline from links */
         color: white;            /* Set link text color to white */
     }
@@ -495,10 +522,148 @@ body {
         font-size: .7rem;
         padding: .2rem .5rem;
     }
+    .desc-p {
+        padding: 0rem 5vw;
+    }
+    footer {
+        
+    }
+    #blob {
+        width: 100vw;
+        padding: .5rem;
+    }
+    #blob h1 {
+        font-size: 1.5rem;
+    }
+    gradient-tag {
+        font-size: 1.5rem;
+    }
     
+}
+
+highlight {
+    color: #12bcff;
+    font-weight: bold;
 }
 
 .navbar h1 {
     margin-left: 2rem;
 }
 
+gradient-tag {
+    background: linear-gradient(to right, #0698d1, #338DFF); /* This gradient transitions from a reddish color (#FF5733) on the left to a blue color (#338DFF) on the right */
+    padding: 10px 20px;  /* This adds some padding to the tag */
+    display: inline-block; /* This makes the tag only as wide as its content */
+    border-radius: 5px;  /* This gives the tag rounded corners */
+    color: #ffffff;  /* This sets the text color to white */
+    font-family: Arial, sans-serif; /* This sets the font for the tag's text */
+    margin: 0px 4px;
+    box-shadow: 0px 0px 0px #338DFF;
+    transition: .2s ease-in;
+}
+
+gradient-tag:hover {
+    box-shadow: 0px 0px 20px #338DFF;
+    cursor: cell;
+}
+
+#blob {
+    position: relative;
+    width: 50vw;
+    box-shadow: 0px 0px 70px gray;
+    text-align: left;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid gray;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.3s ease;
+}
+
+.payment-icons {
+    font-size: 24px;
+}
+.payment-icon {
+    margin: 0px 15px;
+    margin-top: 15px;
+}
+
+#view-more {
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+#view-arrow {
+    margin: 3rem;
+}
+
+#view-text {
+    text-decoration: underline;
+    color: #0698d1;
+    cursor: crosshair;
+    font-size: 0px;
+}
+
+/* BLOG STYLING */
+
+#blog {
+    margin: 5rem 0rem;
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    align-items: center;
+    text-align: center;
+    border: 1px solid gray;
+    width: 100vw;
+}
+
+#blog-header {
+    max-width: inherit;
+    text-align: center;
+    line-height: 1.25rem;
+}
+
+#blog-description {
+    position: relative;
+    top: -15px;
+    text-align: center;
+}
+
+#blog-image {
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.blog-btn {
+    text-align: center;
+    background: linear-gradient(to right, #0698d1, #338DFF);
+}
+
+#blog-handle {
+    position: relative;
+    top: -40px;
+}
+
+#blog-left-arrow {
+    position: relative;
+    bottom: 340px;
+    right: 165px;
+    color: black;
+    transition: .2s color ease-out;
+}
+
+#blog-left-arrow:hover {
+    color: #338DFF;
+}
+
+#blog-right-arrow {
+    position: relative;
+    bottom: 340px;
+    left: 160px;
+        color: black;
+    transition: .2s color ease-out;
+}
+
+#blog-right-arrow:hover {
+    color: #338DFF;
+}

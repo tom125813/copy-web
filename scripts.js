@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let siteTitle = "Ink & Quill";
-    let elements = document.querySelectorAll("[data-title-replace]");
-    
-    elements.forEach(element => {
-        element.innerHTML = element.innerHTML.replace('{title}', siteTitle);
-    });
-
-    document.title = siteTitle;
-});
-
 const texts = ["Your Word-Play", "Your Business", "Today"];
 const outputElement = document.getElementById("type-output");
 let textIndex = 0;
@@ -20,10 +9,9 @@ document.querySelector('.hamburger').addEventListener('click', function() {
     if (navLinks.classList.contains('active')) {
         document.querySelector('.navbar h1').style = "display: block;";
     } else {
-document.querySelector('.navbar h1').style = "display: none; ";
+document.querySelector('.navbar h1').style = "display: none;";
     }
     navLinks.classList.toggle('active');
-
 });
 
 
@@ -57,3 +45,25 @@ function typeWriter() {
 }
 
 typeWriter(); // produces error because it might not exist
+
+/*document.addEventListener('DOMContentLoaded', () => {
+    const blobs = document.querySelectorAll('.blob');
+
+    blobs.forEach(blob => {
+        blob.addEventListener('mousemove', e => {
+            const xCenter = blob.clientWidth / 2;
+            const yCenter = blob.clientHeight / 2;
+
+            const offsetX = (e.clientX - e.target.getBoundingClientRect().left - xCenter) / xCenter;
+            const offsetY = (e.clientY - e.target.getBoundingClientRect().top - yCenter) / yCenter;
+
+            // Reduced the effect strength from 20 to 10 for both X and Y axis
+            const transform = `rotateY(${offsetX * 20}deg) rotateX(${offsetY * -20}deg)`;
+            blob.style.transform = `translate(-50%) ${transform}`;
+        });
+
+        blob.addEventListener('mouseleave', () => {
+            blob.style.transform = 'translate(-50%)';
+        });
+    });
+});*/
